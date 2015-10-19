@@ -94,7 +94,7 @@ module Postamt
     end
 
     ActiveRecord::LogSubscriber.prepend Postamt::LogSubscriber
-    ActiveRecord::Relation.prepend Postamt::Relation
+    ActiveRecord::Relation.include Postamt::Relation
   end
 
   module LogSubscriber
